@@ -19,6 +19,12 @@ export default function Home() {
 
         <LeadForm />
       </section>
+      <div className="mt-6 text-center">
+        <a href="/leads" className="text-sm text-[#ec5c39] underline">
+          View submitted leads →
+        </a>
+      </div>  
     </main>
+    
   );
 }
