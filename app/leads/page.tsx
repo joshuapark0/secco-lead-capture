@@ -1,4 +1,5 @@
 import { supabaseAdmin } from "@/lib/supabaseAdmin";
+export const dynamic = "force-dynamic";
 
 export default async function LeadsPage() {
   const { data: leads, error } = await supabaseAdmin
