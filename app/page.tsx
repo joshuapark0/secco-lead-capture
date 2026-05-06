@@ -1,23 +1,24 @@
-import { submitLead } from "./actions";
+import { LeadForm } from "@/components/LeadForm";
 
 export default function Home() {
   return (
-    <form action={submitLead} className="flex flex-col gap-4 p-10">
-      <input name="fullName" placeholder="Full Name" required />
-      <input name="email" placeholder="Email" required />
-      <input name="company" placeholder="Company" />
+    <main className="min-h-screen bg-zinc-100 px-6 py-16">
+      <section className="mx-auto max-w-xl rounded-2xl bg-white p-10 shadow-sm">
 
-      <select name="source" required>
-        <option value="">How did you hear about us?</option>
-        <option value="Google">Google</option>
-        <option value="Referral">Referral</option>
-        <option value="Social">Social</option>
-        <option value="Other">Other</option>
-      </select>
+        <p className="mb-2 text-sm font-semibold text-[#ec5c39]">
+          Secco Squared
+        </p>
 
-      <textarea name="message" placeholder="Message" />
+        <h1 className="mb-3 text-3xl font-bold tracking-tight text-black">
+          Let’s start a conversation
+        </h1>
 
-      <button type="submit">Submit</button>
-    </form>
+        <p className="mb-8 text-zinc-600">
+          Tell us a little about yourself and we’ll follow up soon.
+        </p>
+
+        <LeadForm />
+      </section>
+    </main>
   );
 }
